@@ -1,0 +1,25 @@
+{
+  "name": "bit-express-js-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaidasMakstutis/bit-express-js-server.git"
+  },
+  "keywords": [],
+  "author": "Vaidas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VaidasMakstutis/bit-express-js-server/issues"
+  },
+  "homepage": "https://github.com/VaidasMakstutis/bit-express-js-server#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "laravel-mix": "^6.0.39",
+    "nodemon": "^2.0.15"
+  },
+  "description": ""
+}
