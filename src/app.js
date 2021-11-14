@@ -1,7 +1,5 @@
 import axios from "axios";
 
-
-
 //calculator
 // window.addEventListener('DOMContentLoaded', () => {
 // const alert = document.querySelector('.alert-danger');
@@ -32,11 +30,9 @@ import axios from "axios";
 // })
 //DOMINOS
 
-
 window.addEventListener('DOMContentLoaded', () => {
-    
-    const getDominos = () => {
 
+    const getDominos = () => {
         axios.
         get('http://127.0.0.1:3003/dominos').
         then(res => {
@@ -47,19 +43,15 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="left-side">
                           ${e.left_side}
                         </div>
-
                       <div class="right-side">
                       ${e.right_side}
                    </div>
-
               </div>
                 `;
             })
             document.querySelector('.dominos').innerHTML = dominoHtml;
             console.log(res.data);
         });
-
-
     }
 
     const alert = document.querySelector('.alert-danger');

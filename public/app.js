@@ -2188,7 +2188,7 @@ window.addEventListener('DOMContentLoaded', function () {
     axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://127.0.0.1:3003/dominos').then(function (res) {
       var dominoHtml = '';
       res.data.dominos.forEach(function (e) {
-        dominoHtml = dominoHtml + "\n                <div class=\"domino\">\n                        <div class=\"left-side\">\n                          ".concat(e.left_side, "\n                        </div>\n\n                      <div class=\"right-side\">\n                      ").concat(e.right_side, "\n                   </div>\n\n              </div>\n                ");
+        dominoHtml = dominoHtml + "\n                <div class=\"domino\">\n                        <div class=\"left-side\">\n                          ".concat(e.left_side, "\n                        </div>\n                      <div class=\"right-side\">\n                      ").concat(e.right_side, "\n                   </div>\n              </div>\n                ");
       });
       document.querySelector('.dominos').innerHTML = dominoHtml;
       console.log(res.data);
