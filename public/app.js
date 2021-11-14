@@ -2171,12 +2171,12 @@ window.addEventListener('DOMContentLoaded', function () {
       console.log(res);
 
       if (res.data.errMsg) {
-        alert.style.dislpay = 'block';
-        result.style.dislpay = 'none';
+        alert.style.display = 'block';
+        result.style.display = 'none';
         alert.innerHTML = res.data.errMsg;
       } else {
-        alert.style.dislpay = 'none';
-        result.style.dislpay = 'block';
+        alert.style.display = 'none';
+        result.style.display = 'block';
         result.innerHTML = res.data.answer;
       }
     });
