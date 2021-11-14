@@ -4,19 +4,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "go": "nodemon"
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VaidasMakstutis/bit-express-js-server.git"
   },
   "keywords": [],
-  "author": "Vaidas",
+  "author": "Edvinas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VaidasMakstutis/bit-express-js-server/issues"
+    "url": "https://github.com/Mokslams/Js-reacts"
   },
-  "homepage": "https://github.com/VaidasMakstutis/bit-express-js-server#readme",
+  "homepage": "https://github.com/Mokslams/Js-react",
   "dependencies": {
     "axios": "^0.24.0",
     "bootstrap": "^4.6.0",

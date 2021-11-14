@@ -2157,17 +2157,51 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
- // 
+ //calculator
+// window.addEventListener('DOMContentLoaded', () => {
+// const alert = document.querySelector('.alert-danger');
+// const result = document.querySelector('.alert-success');
+//     document.querySelector('button').addEventListener('click', () => {
+//         const data = {};
+//         data.d1 = document.querySelector('#d1').value || 0;
+//         data.d2 = document.querySelector('#d2').value || 0;
+//         data.action = document.querySelector('#action').value;
+//         axios.post('http://127.0.0.1:3003/calculator', data).
+//             then(res => {
+//                 console.log(res);
+//                 if(res.data.errMsg) {
+//                     alert.style.display = 'block';
+//                     result.style.display = 'none';
+//                     alert.innerHTML = res.data.errMsg;
+//                 }else {
+//                     alert.style.display = 'none';
+//                     result.style.display = 'block';
+//                     result.innerHTML = res.data.answer;
+//                 }
+//             })
+//     })
+// })
+//DOMINOS
 
 window.addEventListener('DOMContentLoaded', function () {
+  var getDominos = function getDominos() {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://127.0.0.1:3003/dominos').then(function (res) {
+      var dominoHtml = '';
+      res.data.dominos.forEach(function (e) {
+        dominoHtml = dominoHtml + "\n                <div class=\"domino\">\n                        <div class=\"left-side\">\n                          ".concat(e.left_side, "\n                        </div>\n\n                      <div class=\"right-side\">\n                      ").concat(e.right_side, "\n                   </div>\n\n              </div>\n                ");
+      });
+      document.querySelector('.dominos').innerHTML = dominoHtml;
+      console.log(res.data);
+    });
+  };
+
   var alert = document.querySelector('.alert-danger');
   var result = document.querySelector('.alert-success');
   document.querySelector('button').addEventListener('click', function () {
     var data = {};
-    data.d1 = document.querySelector('#d1').value || 0;
-    data.d2 = document.querySelector('#d2').value || 0;
-    data.action = document.querySelector('#action').value;
-    axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://127.0.0.1:3003/calculator', data).then(function (res) {
+    data.left = document.querySelector('#left').value || 0;
+    data.right = document.querySelector('#right').value || 0;
+    axios__WEBPACK_IMPORTED_MODULE_0___default().post('http://127.0.0.1:3003/dominos/add', data).then(function (res) {
       console.log(res);
 
       if (res.data.errMsg) {
@@ -2177,10 +2211,11 @@ window.addEventListener('DOMContentLoaded', function () {
       } else {
         alert.style.display = 'none';
         result.style.display = 'block';
-        result.innerHTML = res.data.answer;
+        result.innerHTML = 'New domino plate was added.';
       }
     });
   });
+  getDominos();
 });
 
 /***/ }),

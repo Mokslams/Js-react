@@ -10004,6 +10004,38 @@ h3 {
   }
 }
 body {
-  color: red;
+  color: darkred;
   font-size: large;
+}
+
+.dominos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.dominos .domino {
+  margin: 11px;
+  border: 2px solid darkslateblue;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: darkslateblue;
+  font-size: 30px;
+  font-weight: bold;
+}
+.dominos .domino .left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 68px;
+  border-right: 2px solid darkslateblue;
+}
+.dominos .domino .right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 70px;
 }
